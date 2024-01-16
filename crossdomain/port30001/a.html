@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cross-Domain Redirect</title>
+</head>
+<body>
+
+<script>
+function redirectToB() {
+  var targetUrl = 'http://localhost:30002/b.html';
+  var params = 'test=100&test2=200';
+  window.location.href = targetUrl + '?' + params;
+}
+
+// ページが読み込まれたらリダイレクトを実行
+redirectToB();
+</script>
+
+</body>
+</html>

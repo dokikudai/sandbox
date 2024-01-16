@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>同一ドメイン パラメータ渡し</title>
+</head>
+<body>
+<h2>クロスドメイン パラメータ渡し</h2>
+<a id="openLink" href="#">クロスドメイン遷移 -> http://localhost:30002/b.html</a>
+
+<script>
+// a href より後ろにスクリプトを記述しないとエラーになる
+// パラメータを編集
+var testValue = 100;
+var test2Value = 200;
+
+// 新しいURLを生成
+var newUrl = 'http://127.0.0.1:30002/b.html?test=' + testValue + '&test2=' + test2Value;
+
+// ページ内のリンク要素に新しいURLを設定
+document.getElementById('openLink').addEventListener('click', function() {
+  // 新しいURLに遷移
+  window.location.href = newUrl;
+});
+</script>
+
+</body>
+</html>

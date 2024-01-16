@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destination Page</title>
+</head>
+<body>
+
+<script>
+// クエリパラメータを取得
+var queryParams = new URLSearchParams(window.location.search);
+var testValue = queryParams.get('test');
+var test2Value = queryParams.get('test2');
+
+// ページに表示する例
+document.body.innerHTML = '<h1>Received Parameters:</h1>' +
+  '<p>test: ' + testValue + '</p>' +
+  '<p>test2: ' + test2Value + '</p>';
+</script>
+
+</body>
+</html>

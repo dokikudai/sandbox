@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>同一ドメインテスト</title>
+</head>
+<body>
+
+<script>
+// パラメータを設定
+var testValue = 100;
+var test2Value = 200;
+
+// d.htmlに遷移せずにデータを受け渡す
+// この例では d.html が同一ドメイン内にあることを前提としています
+var targetWindow = window.open('d.html', '_blank');
+targetWindow.testValue = testValue;
+targetWindow.test2Value = test2Value;
+</script>
+
+</body>
+</html>
